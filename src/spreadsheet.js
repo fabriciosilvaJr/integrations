@@ -10,7 +10,7 @@ const serviceAccountAuth = new JWT({
 
 async function getSheet() {
   const doc = new GoogleSpreadsheet(
-    "1eN6CRbDmb29s2YBv990Q1qc_aVUW_8O9hjv4IN7lncM",
+    process.env.SPREADSHEET_ID,
     serviceAccountAuth
   );
 
@@ -22,21 +22,25 @@ async function getSheet() {
   //console.log(sheet.title);
   //console.log(sheet.rowCount);
   const rows = await sheet.getRows(); // can pass in { limit, offset }
- // console.log(rows[0].get("Email"));
- const request = {
+  // console.log(rows[0].get("Email"));
+  const request = {
     contatos: rows.map((contato) => {
-        return {
-            properties: {
-                company:  contato.get("Nome da empresa"),
-                email:  contato.get("Email"),
-                firstname: contato.get("Nome completo").split(' ').slice(0, -1).join(' '),
-                lastname: contato.get("Nome completo").split(' ').slice(-1).join(' '),
-                phone: contato.get("Telefone"),
-                website: contato.get("Website"),
-              }
-        };
+      return {
+        properties: {
+          company: contato.get("Nome da empresa"),
+          email: contato.get("Email"),
+          firstname: contato
+            .get("Nome completo")
+            .split(" ")
+            .slice(0, -1)
+            .join(" "),
+          lastname: contato.get("Nome completo").split(" ").slice(-1).join(" "),
+          phone: contato.get("Telefone"),
+          website: contato.get("Website"),
+        },
+      };
     }),
-};
+  };
   return request.contatos;
 }
 
