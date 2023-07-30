@@ -5,14 +5,14 @@ Solução do desafio de integração para vaga [https://github.com/godevapi/vaga
 ## Executando o projeto
 
 ### Usar demo serverless agora mesmo 🚀
-Você pode experimentar o resultado do projeto agora mesmo com esse frontend simples: 
+Você pode experimentar o resultado do projeto agora mesmo com esse frontend simples: https://integracaohubspot.netlify.app
 
 ### Preparação
 Recomendo o uso do arquivo `.env` na raiz do projeto para facilitar configuração de variáveis de ambiente.
 
 1. instalar [Node.js](https://nodejs.org/pt-br), caso ainda não tenha
 2. executar `npm install` na raiz do projeto para instalar as dependências
-3. adicionar o arquivo de [credenciais do Google](https://developers.google.com/workspace/guides/create-credentials?hl=pt-br#service-account) com o nome `secret-credential.json` na raiz do projeto (local e nome configuráveis via variável de ambiente)
+3. adicionar o arquivo de [credenciais do Google](https://developers.google.com/workspace/guides/create-credentials?hl=pt-br#service-account) com o nome `credenciais` na pasta netlify/functions
 4. dar permissão de leitura em sua planilha para o email da service account 
 5. configurar a variável de ambiente HUB_SPOT_API_KEY com o [token da sua aplicação HubSpot](https://knowledge.hubspot.com/pt/integrations/how-do-i-get-my-hubspot-api-key#:~:text=Na%20sua%20conta%20da%20HubSpot,em%20Gerar%20chave%20de%20API), que deve ter permissão `crm.objects.contacts.write`
 6. seguir passos da seção abaixo, [Executando o código](#executando-o-código)
