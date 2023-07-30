@@ -1,5 +1,5 @@
 const { GoogleSpreadsheet } = require('google-spreadsheet')
-const credenciais = require('./credenciais.json')
+const credenciais = require('../netlify/functions/credenciais.json')
 const { JWT } = require('google-auth-library')
 
 const serviceAccountAuth = new JWT({
@@ -8,9 +8,9 @@ const serviceAccountAuth = new JWT({
   scopes: ['https://www.googleapis.com/auth/spreadsheets']
 })
 
-async function getSheet() {
+async function getSheet(spreadsheetId) {
   const doc = new GoogleSpreadsheet(
-    process.env.SPREADSHEET_ID,
+    spreadsheetId,
     serviceAccountAuth
   )
 
