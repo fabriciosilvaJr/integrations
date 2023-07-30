@@ -6,13 +6,11 @@ const dominiosNaoPermitidos = ['@gmail.com', '@yahoo.com', '@outlook.com']
 
 async function main() {
   const contactsRow = await getSheet()
-  const contactsLenght = contactsRow.length
   const contatosFiltrados = contactsRow.filter((c) =>
     verificarSeEmailCorporativo(c.properties.email)
   )
 
-  console.log(contatosFiltrados)
-  await createContacts(contatosFiltrados, contactsLenght)
+  await createContacts(contatosFiltrados)
 }
 
 function verificarSeEmailCorporativo(email) {
