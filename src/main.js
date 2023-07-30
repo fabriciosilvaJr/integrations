@@ -1,10 +1,13 @@
 const { getSheet } = require("./spreadsheet");
+const { createContacts } = require("./hubspot")
+
 require("dotenv").config();
 
 async function main() {
 
-    const contactRows = await getSheet();
-    console.log(contactRows)
+    const contactsRow = await getSheet();
+
+    console.log(contactsRow)
     
 
    
