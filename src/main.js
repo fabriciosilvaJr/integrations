@@ -6,10 +6,9 @@ require("dotenv").config();
 async function main() {
 
     const contactsRow = await getSheet();
-
-    console.log(contactsRow)
-    
-
+    const contactsLenght= contactsRow.length ;
+    await createContacts(contactsRow,contactsLenght);
+ 
    
 }
 
