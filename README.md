@@ -13,8 +13,10 @@ Recomendo o uso do arquivo `.env` na raiz do projeto para facilitar configuraç�
 2. executar `npm install` na raiz do projeto para instalar as dependências
 3. adicionar o arquivo de [credenciais do Google](https://developers.google.com/workspace/guides/create-credentials?hl=pt-br#service-account) com o nome `credenciais.json` na pasta netlify/functions
 4. dar permissão de leitura em sua planilha para o email da service account ou deixar planilha acessível ao público.
-5. configurar a variável de ambiente HUB_SPOT_API_KEY com o [token da sua aplicação HubSpot](https://knowledge.hubspot.com/pt/integrations/how-do-i-get-my-hubspot-api-key#:~:text=Na%20sua%20conta%20da%20HubSpot,em%20Gerar%20chave%20de%20API), que deve ter permissão `crm.objects.contacts.write`
-6. seguir passos da seção abaixo
+5. criar arquivo .env na raiz do projeto com  SPREADSHEET_ID e HUB_SPOT_API_KEY
+6. configurar a variável de ambiente SPREADSHEET_ID com o [id da planilha do Google Sheet]
+7. configurar a variável de ambiente HUB_SPOT_API_KEY com o [token da sua aplicação HubSpot](https://knowledge.hubspot.com/pt/integrations/how-do-i-get-my-hubspot-api-key#:~:text=Na%20sua%20conta%20da%20HubSpot,em%20Gerar%20chave%20de%20API), que deve ter permissão `crm.objects.contacts.write`
+8. seguir passos da seção abaixo
 
 ### Executando o código na linha de comando
 Após preparação basta executar `node index.js`
