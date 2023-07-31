@@ -33,4 +33,4 @@ Após preparação execute o comando `npm run dev`
 - [Netlify](https://www.netlify.com/) - para hospedagem e serverless functions
 - [dotenv](https://www.npmjs.com/package/dotenv) - para dar suporte leitura de variáveis de ambiente a partir do arquivo .env
 
-Obs. não esqueça de verficar as colunas nos contatos do hubspot, pois a coluna Nome da Empresa não vem como padrão ao criar uma conta vocé terá que ir em editar colunas, pesquisar pela coluna Nome da Empresa e marcar a caixinha para passar a ser exibida 
+Obs. não esqueça de verificar as colunas nos contatos do hubspot, pois a coluna Nome da Empresa não vem como padrão ao criar uma conta vocé terá que ir em editar colunas, pesquisar pela coluna Nome da Empresa e marcar a caixinha para passar a ser exibida 
