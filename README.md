@@ -1,7 +1,6 @@
 # integrations
 
-Solução do desafio de integração para vaga [https://github.com/godevapi/vagas](https://github.com/godevapi/vagas/tree/master/integrations), de forma que a planilha a ser integrada deve ter as colunas conforme ordem indicada nas instruções, e a primeira linha deve estar com cabeçalho ou estar vazia (pois é ignorada) 
-
+Solução do desafio de integração para vaga [https://github.com/godevapi/vagas](https://github.com/godevapi/vagas/tree/master/integrations)
 ## Executando o projeto
 
 ### Usar demo serverless agora mesmo 🚀
