@@ -3,7 +3,11 @@ async function createContacts(hubspotClient, contacts) {
     try {
       await hubspotClient.crm.contacts.basicApi.create(contacts[i])
     } catch (error) {
-      console.error(error)
+      if (error.body && error.body.category === 'CONFLICT') {
+        console.log(`${contacts[i].properties.email} não inserido, verifique por email já inserido`)
+      } else {
+        console.error(error)
+      }
     }
   }
 }
